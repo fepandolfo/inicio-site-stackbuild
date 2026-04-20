@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StackBuild — Agência Digital de Performance e Conversão</title>
+    <meta name="description" content="StackBuild constrói estruturas digitais completas com foco em performance, estética e conversão de leads. Sites e ecossistemas que geram clientes.">
+    <meta name="author" content="StackBuild">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="StackBuild — Agência Digital de Performance e Conversão">
+    <meta property="og:description" content="StackBuild constrói estruturas digitais completas com foco em performance, estética e conversão de leads. Sites e ecossistemas que geram clientes.">
+    
+    <link rel="stylesheet" href="/src/styles.css">
+</head>
+<body class="bg-background text-foreground antialiased">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-background/80 backdrop-blur-lg border-b border-border z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4 sm:py-6">
+                <div class="logo text-xl sm:text-2xl font-bold tracking-wider">
+                    <span class="text-primary">Stack</span><span class="text-accent">Build</span>
+                </div>
+                <ul class="nav-menu hidden md:flex list-none gap-8 text-sm">
+                    <li><a href="#sobre" class="text-foreground hover:text-primary transition-smooth">Sobre</a></li>
+                    <li><a href="#servicos" class="text-foreground hover:text-primary transition-smooth">Serviços</a></li>
+                    <li><a href="#portfolio" class="text-foreground hover:text-primary transition-smooth">Portfolio</a></li>
+                    <li><a href="#contato" class="text-foreground hover:text-primary transition-smooth">Contato</a></li>
+                </ul>
+                <div class="hamburger md:hidden flex flex-col gap-1.5 cursor-pointer">
+                    <span class="w-6 h-0.5 bg-primary rounded transition-smooth"></span>
+                    <span class="w-6 h-0.5 bg-primary rounded transition-smooth"></span>
+                    <span class="w-6 h-0.5 bg-primary rounded transition-smooth"></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero relative min-h-screen flex items-center pt-20 overflow-hidden">
+        <div class="absolute inset-0 bg-grid opacity-30"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="text-center space-y-6 sm:space-y-8">
+                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold leading-tight">
+                    Transforme sua <span class="text-primary">Presença Digital</span> em <span class="text-accent">Geração Real de Clientes</span>
+                </h1>
+                <p class="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
+                    Estruturas digitais completas. Performance excepcional. Estética futurística. Conversão garantida.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+                    <button class="px-8 py-3 bg-gradient-brand text-primary-foreground font-semibold rounded-lg hover:shadow-glow transition-smooth">
+                        Começar Projeto
+                    </button>
+                    <button class="px-8 py-3 border-2 border-primary text-primary hover:bg-primary/10 font-semibold rounded-lg transition-smooth">
+                        Ver Portfolio
+                    </button>
+                </div>
+                
+                <!-- Floating Card -->
+                <div class="mt-12 sm:mt-16 inline-flex bg-card/50 backdrop-blur-xl border border-border rounded-2xl p-8 shadow-glow animate-float">
+                    <div class="flex gap-8">
+                        <div class="text-center">
+                            <div class="text-3xl sm:text-4xl font-bold text-gradient-brand">300%</div>
+                            <div class="text-sm text-muted-foreground mt-2">Aumento médio em conversão</div>
+                        </div>
+                        <div class="w-px bg-border/50"></div>
+                        <div class="text-center">
+                            <div class="text-3xl sm:text-4xl font-bold text-gradient-brand">95%</div>
+                            <div class="text-sm text-muted-foreground mt-2">Clientes satisfeitos</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-gradient-glow blur-3xl pointer-events-none"></div>
+    </section>
+
+    <!-- 3D Logo Section -->
+    <section class="py-16 sm:py-24 bg-gradient-to-b from-transparent to-secondary/10 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="text-3xl sm:text-5xl font-bold text-gradient">A Logo StackBuild</h2>
+                <p class="text-muted-foreground mt-4">Logo 3D em blocos - Arraste para girar e clique em um bloco para rotacao individual</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
+                <div class="logo-3d-shell bg-card/50 border border-border rounded-2xl p-3 sm:p-4 glow-border">
+                    <div id="logo-3d-canvas" class="logo-3d-canvas" aria-label="Visualizacao 3D da logo StackBuild"></div>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="logo-3d-panel bg-card/50 border border-border rounded-2xl p-5 sm:p-6">
+                        <div class="logo-3d-panel-row">
+                            <span class="logo-dot"></span>
+                            <span>Modo de camera:</span>
+                            <strong>arraste no canvas</strong>
+                        </div>
+                        <div class="logo-3d-panel-row">
+                            <span class="logo-dot"></span>
+                            <span>Modo de bloco:</span>
+                            <strong>clique no bloco e arraste</strong>
+                        </div>
+                        <div class="logo-3d-panel-row">
+                            <span class="logo-dot"></span>
+                            <span>Particulas cyan:</span>
+                            <strong>fluxo organico + glow aditivo</strong>
+                        </div>
+                        <button id="logo-reset" class="mt-4 w-full px-4 py-2 border border-primary text-primary hover:bg-primary/10 rounded-lg transition-smooth">Resetar orientacao 3D</button>
+                    </div>
+                    <p class="text-lg text-muted-foreground p-4 border-l-4 border-primary bg-secondary/20 rounded">
+                        <strong class="text-foreground">Interativo:</strong> Rotacione a estrutura completa para explorar profundidade e encaixes.
+                    </p>
+                    <p class="text-lg text-muted-foreground p-4 border-l-4 border-primary bg-secondary/20 rounded">
+                        <strong class="text-foreground">Blocos:</strong> Selecione um bloco especifico para girar e inspecionar todos os lados.
+                    </p>
+                    <p class="text-lg text-muted-foreground p-4 border-l-4 border-primary bg-secondary/20 rounded">
+                        <strong class="text-foreground">Assinatura visual:</strong> A marca surge como construcao modular, tecnica e futurista.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre" class="py-16 sm:py-24 bg-gradient-to-b from-secondary/10 to-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-5xl font-bold text-gradient mb-4">Sobre a StackBuild</h2>
+            <p class="text-muted-foreground text-lg mb-12">Somos a ponte entre sua visão e a realidade digital</p>
+            
+            <div class="grid md:grid-cols-3 gap-6 sm:gap-8">
+                <div class="group p-6 sm:p-8 bg-card/50 border border-border rounded-xl hover:border-primary hover:bg-card transition-smooth hover:shadow-glow">
+                    <div class="w-12 h-12 text-primary text-3xl mb-4">✓</div>
+                    <h3 class="text-xl sm:text-2xl font-bold mb-3 text-foreground">Performance</h3>
+                    <p class="text-muted-foreground">Sites otimizados que carregam em milissegundos. Velocidade que converte.</p>
+                </div>
+                <div class="group p-6 sm:p-8 bg-card/50 border border-border rounded-xl hover:border-primary hover:bg-card transition-smooth hover:shadow-glow">
+                    <div class="w-12 h-12 text-accent text-3xl mb-4">◆</div>
+                    <h3 class="text-xl sm:text-2xl font-bold mb-3 text-foreground">Estética</h3>
+                    <p class="text-muted-foreground">Design futurístico que impressiona. Interface intuitiva e envolvente.</p>
+                </div>
+                <div class="group p-6 sm:p-8 bg-card/50 border border-border rounded-xl hover:border-primary hover:bg-card transition-smooth hover:shadow-glow">
+                    <div class="w-12 h-12 text-primary text-3xl mb-4">⚡</div>
+                    <h3 class="text-xl sm:text-2xl font-bold mb-3 text-foreground">Conversão</h3>
+                    <p class="text-muted-foreground">Estratégia focada em ROI. Cada elemento pensado para converter leads em clientes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicos" class="py-16 sm:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-5xl font-bold text-gradient mb-4">Nossos Serviços</h2>
+            <p class="text-muted-foreground text-lg mb-12">Soluções completas para sua presença digital</p>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                <div class="p-6 sm:p-8 bg-gradient-card border border-border rounded-xl hover:border-primary transition-smooth group">
+                    <div class="text-3xl font-bold text-gradient-brand mb-4">01</div>
+                    <h3 class="text-xl font-bold mb-3">Web Design & UX</h3>
+                    <p class="text-muted-foreground mb-4">Design responsivo, intuitivo e focado na experiência do usuário.</p>
+                    <ul class="space-y-2 text-sm text-muted-foreground">
+                        <li>→ Design Responsivo</li>
+                        <li>→ UX Research</li>
+                        <li>→ Prototipagem</li>
+                    </ul>
+                </div>
+                
+                <div class="p-6 sm:p-8 bg-gradient-card border border-border rounded-xl hover:border-primary transition-smooth group">
+                    <div class="text-3xl font-bold text-gradient-brand mb-4">02</div>
+                    <h3 class="text-xl font-bold mb-3">Desenvolvimento Web</h3>
+                    <p class="text-muted-foreground mb-4">Código limpo, performático e escalável. Tecnologias modernas.</p>
+                    <ul class="space-y-2 text-sm text-muted-foreground">
+                        <li>→ Frontend Moderno</li>
+                        <li>→ Backend Robusto</li>
+                        <li>→ Integração APIs</li>
+                    </ul>
+                </div>
+                
+                <div class="p-6 sm:p-8 bg-gradient-card border border-border rounded-xl hover:border-primary transition-smooth group">
+                    <div class="text-3xl font-bold text-gradient-brand mb-4">03</div>
+                    <h3 class="text-xl font-bold mb-3">E-commerce</h3>
+                    <p class="text-muted-foreground mb-4">Plataformas de vendas otimizadas e seguras.</p>
+                    <ul class="space-y-2 text-sm text-muted-foreground">
+                        <li>→ Plataforma Customizada</li>
+                        <li>→ Sistema de Pagamentos</li>
+                        <li>→ Gestão de Produtos</li>
+                    </ul>
+                </div>
+                
+                <div class="p-6 sm:p-8 bg-gradient-card border border-border rounded-xl hover:border-primary transition-smooth group">
+                    <div class="text-3xl font-bold text-gradient-brand mb-4">04</div>
+                    <h3 class="text-xl font-bold mb-3">Apps Móveis</h3>
+                    <p class="text-muted-foreground mb-4">Aplicativos nativos e híbridos com experiência premium.</p>
+                    <ul class="space-y-2 text-sm text-muted-foreground">
+                        <li>→ iOS & Android</li>
+                        <li>→ React Native</li>
+                        <li>→ Push Notifications</li>
+                    </ul>
+                </div>
+                
+                <div class="p-6 sm:p-8 bg-gradient-card border border-border rounded-xl hover:border-primary transition-smooth group">
+                    <div class="text-3xl font-bold text-gradient-brand mb-4">05</div>
+                    <h3 class="text-xl font-bold mb-3">SEO & Performance</h3>
+                    <p class="text-muted-foreground mb-4">Otimização para mecanismos de busca e velocidade.</p>
+                    <ul class="space-y-2 text-sm text-muted-foreground">
+                        <li>→ On-page SEO</li>
+                        <li>→ Core Web Vitals</li>
+                        <li>→ Analytics</li>
+                    </ul>
+                </div>
+                
+                <div class="p-6 sm:p-8 bg-gradient-card border border-border rounded-xl hover:border-primary transition-smooth group">
+                    <div class="text-3xl font-bold text-gradient-brand mb-4">06</div>
+                    <h3 class="text-xl font-bold mb-3">Consultoria Digital</h3>
+                    <p class="text-muted-foreground mb-4">Estratégia digital completa. Do planejamento à execução.</p>
+                    <ul class="space-y-2 text-sm text-muted-foreground">
+                        <li>→ Diagnóstico Digital</li>
+                        <li>→ Roadmap Estratégico</li>
+                        <li>→ Mentoria</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-16 sm:py-24 bg-gradient-to-b from-transparent to-secondary/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-5xl font-bold text-gradient mb-4">Portfolio</h2>
+            <p class="text-muted-foreground text-lg mb-12">Projetos que transformaram negócios</p>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                <div class="group cursor-pointer">
+                    <div class="h-64 bg-gradient-card border border-border rounded-xl overflow-hidden mb-4 group-hover:border-primary transition-smooth group-hover:shadow-glow">
+                        <div class="w-full h-full flex items-center justify-center text-6xl text-foreground/10 bg-gradient-brand">◈</div>
+                    </div>
+                    <h3 class="text-lg font-bold text-primary group-hover:text-accent transition-smooth">E-commerce B2B</h3>
+                    <p class="text-muted-foreground mt-2">Plataforma de vendas com 300% de aumento em conversão</p>
+                    <span class="inline-block mt-3 text-xs text-primary bg-primary/10 px-3 py-1 rounded-full">Design • Desenvolvimento</span>
+                </div>
+                
+                <div class="group cursor-pointer">
+                    <div class="h-64 bg-gradient-card border border-border rounded-xl overflow-hidden mb-4 group-hover:border-primary transition-smooth group-hover:shadow-glow">
+                        <div class="w-full h-full flex items-center justify-center text-6xl text-foreground/10 bg-gradient-brand">◇</div>
+                    </div>
+                    <h3 class="text-lg font-bold text-primary group-hover:text-accent transition-smooth">SaaS Platform</h3>
+                    <p class="text-muted-foreground mt-2">Aplicação escalável que atingiu 50k usuários em 6 meses</p>
+                    <span class="inline-block mt-3 text-xs text-primary bg-primary/10 px-3 py-1 rounded-full">MVP • Scaling</span>
+                </div>
+                
+                <div class="group cursor-pointer">
+                    <div class="h-64 bg-gradient-card border border-border rounded-xl overflow-hidden mb-4 group-hover:border-primary transition-smooth group-hover:shadow-glow">
+                        <div class="w-full h-full flex items-center justify-center text-6xl text-foreground/10 bg-gradient-brand">◆</div>
+                    </div>
+                    <h3 class="text-lg font-bold text-primary group-hover:text-accent transition-smooth">Landing Page</h3>
+                    <p class="text-muted-foreground mt-2">Campanha que gerou 10k leads em 3 meses</p>
+                    <span class="inline-block mt-3 text-xs text-primary bg-primary/10 px-3 py-1 rounded-full">Conversão • Performance</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-16 sm:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-5xl font-bold text-gradient mb-4">Nosso Processo</h2>
+            <p class="text-muted-foreground text-lg mb-12">Do conceito ao lançamento, com excelência</p>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                <div class="p-6 sm:p-8 bg-card/50 border border-border rounded-xl hover:border-primary transition-smooth">
+                    <div class="text-3xl font-bold text-gradient-brand mb-4">01</div>
+                    <h3 class="text-lg sm:text-xl font-bold mb-3">Descoberta</h3>
+                    <p class="text-muted-foreground">Entendemos seu negócio, mercado e objetivos. Pesquisa profunda para estratégia sólida.</p>
+                </div>
+                <div class="p-6 sm:p-8 bg-card/50 border border-border rounded-xl hover:border-primary transition-smooth">
+                    <div class="text-3xl font-bold text-gradient-brand mb-4">02</div>
+                    <h3 class="text-lg sm:text-xl font-bold mb-3">Estratégia</h3>
+                    <p class="text-muted-foreground">Definimos roadmap, tecnologias e KPIs. Planejamento detalhado para sucesso.</p>
+                </div>
+                <div class="p-6 sm:p-8 bg-card/50 border border-border rounded-xl hover:border-primary transition-smooth">
+                    <div class="text-3xl font-bold text-gradient-brand mb-4">03</div>
+                    <h3 class="text-lg sm:text-xl font-bold mb-3">Design & Prototipagem</h3>
+                    <p class="text-muted-foreground">Wireframes, mockups e protótipos interativos. Sua aprovação antes do desenvolvimento.</p>
+                </div>
+                <div class="p-6 sm:p-8 bg-card/50 border border-border rounded-xl hover:border-primary transition-smooth">
+                    <div class="text-3xl font-bold text-gradient-brand mb-4">04</div>
+                    <h3 class="text-lg sm:text-xl font-bold mb-3">Desenvolvimento</h3>
+                    <p class="text-muted-foreground">Código limpo, testes rigorosos e entrega iterativa. Transparência total no progresso.</p>
+                </div>
+                <div class="p-6 sm:p-8 bg-card/50 border border-border rounded-xl hover:border-primary transition-smooth">
+                    <div class="text-3xl font-bold text-gradient-brand mb-4">05</div>
+                    <h3 class="text-lg sm:text-xl font-bold mb-3">Teste & QA</h3>
+                    <p class="text-muted-foreground">Testes funcionais, de performance e segurança. Zero bugs antes do lançamento.</p>
+                </div>
+                <div class="p-6 sm:p-8 bg-card/50 border border-border rounded-xl hover:border-primary transition-smooth">
+                    <div class="text-3xl font-bold text-gradient-brand mb-4">06</div>
+                    <h3 class="text-lg sm:text-xl font-bold mb-3">Lançamento & Suporte</h3>
+                    <p class="text-muted-foreground">Deploy com sucesso, monitoramento contínuo e suporte dedicado.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 sm:py-24 bg-gradient-to-b from-secondary/10 to-transparent text-center">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-5xl font-bold text-gradient mb-4">Pronto para transformar sua presença digital?</h2>
+            <p class="text-xl text-muted-foreground mb-8">Deixe a StackBuild levar seu negócio para o próximo nível</p>
+            <button class="px-10 py-4 bg-gradient-brand text-primary-foreground font-bold rounded-lg text-lg hover:shadow-glow transition-smooth">
+                Solicitar Orçamento
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary/30 border-t border-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h4 class="font-bold text-foreground mb-3">StackBuild</h4>
+                    <p class="text-muted-foreground">Transformando presença digital em geração real de clientes.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-foreground mb-3">Serviços</h4>
+                    <ul class="space-y-2 text-muted-foreground">
+                        <li><a href="#servicos" class="hover:text-primary transition-smooth">Web Design</a></li>
+                        <li><a href="#servicos" class="hover:text-primary transition-smooth">Desenvolvimento</a></li>
+                        <li><a href="#servicos" class="hover:text-primary transition-smooth">E-commerce</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-foreground mb-3">Contato</h4>
+                    <ul class="space-y-2 text-muted-foreground">
+                        <li>📧 contato@stackbuild.com</li>
+                        <li>📱 (11) 99999-9999</li>
+                        <li>📍 São Paulo, SP</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center pt-8 border-t border-border text-muted-foreground">
+                <p>&copy; 2026 StackBuild. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/src/main.js" type="module"></script>
+</body>
+</html>
